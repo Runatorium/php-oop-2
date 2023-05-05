@@ -1,16 +1,17 @@
 <?php
 
-require __DIR__ . '/type.php';
+require __DIR__ . '/products.php';
 
-class Type extends Product
+class Type
 {
-    public string $animal_type;
+    public string $tipo_prodotto;
 
+    public function __construct(
+        string $_tipo,
+    ) {
+        $this->tipo_prodotto = $_tipo;
+    }
 }
-
-
-
-
 
 
 ?>
