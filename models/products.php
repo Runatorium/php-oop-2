@@ -6,33 +6,25 @@ class Products
     public string $name;
     public string $description;
     public float $price;
-    public $type;
-
+    public $Animale;
 
     function __construct(
         string $_name,
         string $_description,
         float $_price,
-        array $_tipi,
+        array $_Animali,
     ) {
         $this->name = $_name;
         $this->description = $_description;
         $this->price = $_price;
-        $this->type = $_tipi;
+        $this->Animale = $_Animali;
 
-        foreach ($_tipi as $tipo) {
-            if (!$tipo instanceof Type) {
+        foreach ($_Animali as $Animale) {
+            if (!$Animale instanceof Animale) {
                 "Il tipo del Prodotto deve essere un'istanza di 'Type'";
                 die();
             }
         }
-    }
-
-    public function getType()
-    {
-        $tipi = [];
-        foreach ($this->tipi as $tipo)
-            $tipi[] = $tipo->tipo_prodotto;
     }
 }
 
