@@ -7,13 +7,16 @@ class Ossa extends Products
     public string $Materiale;
     public int $Size;
 
-    public function __construct($name, $description, $price, $Animale, $_Materiale, $_Grandezza)
+
+
+    public function __construct($name, $description, $price, $Animale, $imgurl, $_Materiale, $_Grandezza)
     {
         parent::__construct(
             $name,
             $description,
             $price,
-            $Animale
+            $Animale,
+            $imgurl
         );
         $this->Materiale = $_Materiale;
         $this->Size = $_Grandezza;
