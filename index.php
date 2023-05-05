@@ -2,12 +2,14 @@
 require __DIR__ . '/models/products.php';
 require __DIR__ . '/models/type.php';
 
-$tipo = new Type("Cibo");
+$tipi = [
+    new Type("Cibo"),
+    new Type("Attrezzo")
+];
 
-$ciotola = new Product('Crocchette', 'Crocchette di manzo', 9.99, $tipo);
+var_dump($tipi);
+
+$ciotola = new Products('Crocchette', 'Crocchette di manzo', 9.99, $tipi);
 var_dump($ciotola);
 
-$prova = new type("cane");
-var_dump($prova)
-
-    ?>
+?>
