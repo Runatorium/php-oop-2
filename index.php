@@ -74,7 +74,7 @@ $products = [
                                     echo $product->colore;
                                 } ?>
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Acquista</a>
                         </div>
                     </div>
 
