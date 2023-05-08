@@ -15,10 +15,25 @@ $Animali = [
 
 $products = [
     new Cucce("cuccia3000", "cuccia potentissima", 560.00, [new Animale("Cane")], "./img/71-tsDiw8iL._AC_SY355_.jpg", "Cuccia", "tessuto-spesso"),
-    new Laser("BFG", "Big-gun", 900.00, [new Animale("Gatto")], "./img/download.jpg", "12v", "Rosso"),
+    new Laser("BFG", "Big-gun", 900.00, [new Animale(1)], "./img/download.jpg", "12v", "Rosso"),
     new Ossa("ossobuco", "Osso del ritorno", 5.99, [new Animale("Cane")], "./img/brekz-osso-di-manzo-xxl-per-cane.jpg", "Osso di bue", 20),
     new Ossa("ossobrutto", "Osso del ricettacolo", 6.99, [new Animale("Cane")], "./img/brekz-osso-di-manzo-xxl-per-cane.jpg", "Osso di Alce", 20)
 ];
+
+trait CycleEach
+{
+
+    public function CycleEach($_Animali)
+    {
+        foreach ($_Animali as $Animale) {
+            if (!$Animale instanceof Animale) {
+                throw new Exception($Animale . 'non è una stringa');
+            }
+            var_dump('tipologia animali non specificata');
+        }
+    }
+}
+
 
 
 ?>
@@ -68,6 +83,9 @@ $products = [
                             <p class="card-text">
                                 <?php if (isset($product->Size)) {
                                     echo $product->Size;
+                                    ?>
+                                    Grammi
+                                    <?php
                                 } elseif (isset($product->imbottitura_cuccia)) {
                                     echo $product->imbottitura_cuccia;
                                 } elseif (isset($product->colore)) {
