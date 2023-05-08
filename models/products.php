@@ -4,7 +4,6 @@ class Products
     use CycleEach;
     public string $name;
     public string $description;
-    public float $price;
     public $Animale;
     public string $imgurl;
 

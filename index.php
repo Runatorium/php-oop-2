@@ -23,6 +23,8 @@ $products = [
 trait CycleEach
 {
 
+    public $price;
+
     public function CycleEach($_Animali)
     {
         foreach ($_Animali as $Animale) {
